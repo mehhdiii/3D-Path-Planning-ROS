@@ -116,8 +116,8 @@ class GazeboModel(object):
 
 def listener():
     # rospy.init_node('listener', anonymous=True)
-    gazebo_models_list = ['ground_plane', 'iris', 'unit_box', 'unit_box_0', 'table', 'unit_box_1', 'table_0', 'unit_box_2',  'unit_box_3', 'unit_box_4', 'unit_box_5', 'washer', 'unit_box_6', 'table_1', 'bookshelf', 'Workshop', 'unit_box_7', 'unit_box_8', 'table_2', 'cabinet']
-
+    # gazebo_models_list = ['ground_plane', 'iris', 'unit_box', 'unit_box_0', 'table', 'unit_box_1', 'table_0', 'unit_box_2',  'unit_box_3', 'unit_box_4', 'unit_box_5', 'washer', 'unit_box_6', 'table_1', 'bookshelf', 'Workshop', 'unit_box_7', 'unit_box_8', 'table_2', 'cabinet']
+    gazebo_models_list = ['ground_plane', 'iris','unit_box', 'unit_box_0', 'unit_box_1', 'unit_box_2', 'unit_box_3', 'unit_box_4', 'unit_box_5', 'washer', 'unit_box_6', 'Workshop', 'unit_box_7', 'unit_box_9', 'unit_box_10', 'unit_box_11', 'unit_box_8', 'unit_box_12', 'unit_box_13', 'unit_box_14', 'unit_box_15', 'unit_box_16']
     gz_model = GazeboModel(gazebo_models_list)
     rate = rospy.Rate(1)  # 10hz
     time.sleep(4)
