@@ -117,7 +117,9 @@ class GazeboModel(object):
 def listener():
     # rospy.init_node('listener', anonymous=True)
     # gazebo_models_list = ['ground_plane', 'iris', 'unit_box', 'unit_box_0', 'table', 'unit_box_1', 'table_0', 'unit_box_2',  'unit_box_3', 'unit_box_4', 'unit_box_5', 'washer', 'unit_box_6', 'table_1', 'bookshelf', 'Workshop', 'unit_box_7', 'unit_box_8', 'table_2', 'cabinet']
-    gazebo_models_list = ['ground_plane', 'iris','unit_box', 'unit_box_0', 'unit_box_1', 'unit_box_2', 'unit_box_3', 'unit_box_4', 'unit_box_5', 'washer', 'unit_box_6', 'Workshop', 'unit_box_7', 'unit_box_9', 'unit_box_10', 'unit_box_11', 'unit_box_8', 'unit_box_12', 'unit_box_13', 'unit_box_14', 'unit_box_15', 'unit_box_16']
+    # gazebo_models_list = ['ground_plane', 'iris','unit_box', 'unit_box_0', 'unit_box_1', 'unit_box_2', 'unit_box_3', 'unit_box_4', 'unit_box_5', 'washer', 'unit_box_6', 'Workshop', 'unit_box_7', 'unit_box_9', 'unit_box_10', 'unit_box_11', 'unit_box_8', 'unit_box_12', 'unit_box_13', 'unit_box_14', 'unit_box_15', 'unit_box_16']
+    
+    gazebo_models_list = ['ground_plane', 'iris', 'unit_box', 'unit_box_0', 'unit_box_1', 'unit_box_2', 'unit_box_3', 'unit_box_4','unit_box_5', 'washer', 'unit_box_6', 'Workshop', 'unit_box_7', 'unit_box_9', 'unit_box_10', 'unit_box_11', 'unit_box_12', 'unit_box_13', 'unit_box_14', 'unit_box_15', 'unit_box_16', 'Untitled', 'unit_box_17','unit_box_8', 'RAs_room', 'unit_box_18', 'unit_box_19', 'unit_box_20', 'unit_box_21', 'unit_box_22']
     gz_model = GazeboModel(gazebo_models_list)
     rate = rospy.Rate(1)  # 10hz
     time.sleep(4)
@@ -128,7 +130,7 @@ def listener():
     for robot_name in gazebo_models_list:
         pose_now = gz_model.get_model_pose(robot_name)
         if robot_name!=drone_name:
-            obstacles[robot_name] = [pose_now.position.x, pose_now.position.y, pose_now.position.z, 0]
+            obstacles[robot_name] = [pose_now.position.x, pose_now.position.y, pose_now.position.z, 3]
         else:
             drone_loc = [pose_now.position.x, pose_now.position.y, pose_now.position.z, 0]
 
