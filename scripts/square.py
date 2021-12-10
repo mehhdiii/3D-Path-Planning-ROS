@@ -6,6 +6,8 @@ from iq_gnc.py_gnc_functions import *
 # To print colours (optional).
 from iq_gnc.PrintColours import *
 
+import numpy as np
+
 
 def main():
     # Initializing ROS node.
@@ -26,8 +28,14 @@ def main():
     rate = rospy.Rate(3)
 
     # Specify some waypoints
-    goals = [[0, 0, 3, 0], [5, 0, 3, -90], [5, 5, 3, 0],
-             [0, 5, 3, 90], [0, 0, 3, 180], [0, 0, 3, 0]]
+    #goals = [[0, 0, 3, 0], [5, 0, 3, -90], [5, 5, 3, 0],
+     #        [0, 5, 3, 90], [0, 0, 3, 180], [0, 0, 3, 0]]
+    # goals = []
+    # for i in range(0, 10, 5):
+    #     goals.append([i, i, 3, 0])
+    # for i in range(10, 0, -5):
+    #     goals.append([i, i, 3, 0])
+    
     i = 0
 
     while i < len(goals):
