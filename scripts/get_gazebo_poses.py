@@ -130,7 +130,7 @@ def listener():
     for robot_name in gazebo_models_list:
         pose_now = gz_model.get_model_pose(robot_name)
         if robot_name!=drone_name:
-            obstacles[robot_name] = [pose_now.position.x, pose_now.position.y, pose_now.position.z, 3]
+            obstacles[robot_name] = [pose_now.position.x, pose_now.position.y, pose_now.position.z, 1]
         else:
             drone_loc = [pose_now.position.x, pose_now.position.y, pose_now.position.z, 0]
 
